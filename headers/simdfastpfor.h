@@ -52,7 +52,7 @@ public:
       : PageSize(ps), bitsPageSize(gccbits(PageSize)), datatobepacked(33),
         bytescontainer(PageSize + 3 * PageSize / BlockSize) {
     assert(ps / BlockSize * BlockSize == ps);
-    assert(gccbits(BlockSizeInUnitsOfPackSize * PACKSIZE - 1) <= 8);
+    assert(gccbits(BlockSizeInUnitsOfPackSize * PACKSIZE - 1) <= 16);
   }
   enum {
     PACKSIZE = 32,
